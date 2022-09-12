@@ -54,11 +54,7 @@ function draw() {
   bob4.display();
   bob5.display();
   
-  Push();
-  strokeWeight(4);
- stroke(225);
-  line(new roof.rope1.y,bob.position.x,bob.position.y)
-  Pop();
+  
 }
 
 
@@ -66,6 +62,7 @@ function keyPressed() {
 	if (keyCode === UP_ARROW) {
 //WRITE A CORRECT CODE TO APPLY A KEYPRESSED TO CHANGE THE POSITION OF BALL OBJECT TO THE LEFT WHEN UP ARROW KEY IS PRESSED
 
+		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-60,y:-35})
   
 	}
 }
