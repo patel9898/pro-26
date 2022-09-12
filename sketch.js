@@ -1,8 +1,8 @@
 
 const Engine = Matter.Engine;
 const World = Matter.World;
-const bodyA = Matter.Bodies;
-const BodyB = Matter.Bodies;
+const Bodies = Matter.Bodies;
+const Body = Matter.Body;
 const Render = Matter.Render;
 const Constraint = Matter.Constraint;
 var bob1,bob2,bob3, bob4,bob5, roofObject
@@ -18,7 +18,8 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	roofObject=new roof(400,250,230,20);
+	roofObject=new roof(400,220,190,3);
+	//stroke("red")
 	bob1 = new bob(320,575,40)
 	bob2 = new bob(360,575,40)
 	bob3 = new bob(400,575,40)
@@ -41,7 +42,6 @@ function draw() {
   background(230);
   roofObject.display();
 
-  
   rope1.display();
   rope2.display();
   rope3.display();
@@ -50,21 +50,21 @@ function draw() {
 
   bob1.display();
   bob2.display();
+  
   bob3.display();
   bob4.display();
   bob5.display();
-  
-  
 }
+
 
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-//WRITE A CORRECT CODE TO APPLY A KEYPRESSED TO CHANGE THE POSITION OF BALL OBJECT TO THE LEFT WHEN UP ARROW KEY IS PRESSED
-
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-60,y:-35})
-  
+		
+		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-60,y:-35});
 	}
 }
+	
+
 
 

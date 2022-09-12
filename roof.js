@@ -9,11 +9,10 @@ class roof
 		this.y=y;
 		this.w=w
 		this.h=h
-		this.body=Bodies.rectangle(x, y, w, h ,bodies_options);
+		this.body=Bodies.rectangle(x, y, w, h , options);
  		World.add(world, this.body);
 
 	}
-
 	display()
 	{
 			

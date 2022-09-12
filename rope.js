@@ -17,12 +17,9 @@ class rope{
 		var pointA=this.rope.bodyA.position;
 		var pointB=this.rope.bodyB.position;
 
-		strokeWeight(2);
+        strokeWeight(2)
 
-		//WRITE THE CORRECT CODE TO RENDER A LINE BETWEEN THE TWO BODIES
-		
 		line(pointA.x, pointA.y, pointB.x + this.offsetX, pointB.y);
-  
 
 		
 	}
